@@ -30,7 +30,7 @@ flag dhall
 
 flag swagger
   Description:   Turn on Swagger doc generation.
-  Default:       True
+  Default:       False
   Manual:        True
 
 flag swagger-wrapper-format
@@ -40,7 +40,7 @@ flag swagger-wrapper-format
 
 flag large-records
   Description:   Generate records with smaller core code size using the large-records library
-  Default:       True
+  Default:       False
   Manual:        True
 
 source-repository head
