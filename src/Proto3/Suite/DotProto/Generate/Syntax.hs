@@ -16,6 +16,11 @@ import GHC.Data.Bag (listToBag)
 import GHC.Data.FastString (mkFastString)
 import qualified GHC.Hs as GHC
          (HsDecl(..), HsDerivingClause(..), HsModule(..), HsTyVarBndr(..), HsType(..))
+
+#if MIN_VERSION_base(4,20,2)
+-- ghc-9.10.3
+import qualified GHC.Hs.Type as GHC (HsTyVarBndr(UserTyVar, KindedTyVar))
+#endif
 import GHC.Types.Basic (Origin(..))
 import GHC.Types.Name.Occurrence (NameSpace, dataName, mkOccName, tcName, tvName, varName)
 import GHC.Types.Name.Reader (mkRdrQual, mkRdrUnqual, rdrNameSpace)
